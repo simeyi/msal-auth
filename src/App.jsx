@@ -23,6 +23,7 @@ const ProfileContent = () => {
                 account: accounts[0],
             })
             .then((response) => {
+                console.log(response.accessToken);
                 callMsGraph(response.accessToken).then((response) => setGraphData(response));
             });
     }
